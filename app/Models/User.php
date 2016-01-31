@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeDelivery;
+namespace CodeDelivery\Models;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -15,6 +15,11 @@ class User extends Model implements AuthenticatableContract,
                                     CanResetPasswordContract
 {
     use Authenticatable, Authorizable, CanResetPassword;
+
+    public function client()
+    {
+        return $this->hasOne(Client::class);
+    }
 
     /**
      * The database table used by the model.

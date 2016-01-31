@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="CodeDelivery" uuid="04139299-3590-46bd-aef0-de660b4f9dd3">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>codedelivery_curso.*</schema-pattern>
+      <default-schemas>codedelivery_curso.*</default-schemas>
+    </data-source>
+  </component>
+</project>
