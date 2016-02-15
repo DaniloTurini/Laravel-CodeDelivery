@@ -12,7 +12,7 @@ namespace CodeDelivery\Http\Controllers;
 use CodeDelivery\Repositories\OrderRepository;
 use CodeDelivery\Repositories\UserRepository;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+
 
 class OrdersController extends Controller
 {
