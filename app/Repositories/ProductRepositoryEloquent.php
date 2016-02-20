@@ -14,6 +14,12 @@ use CodeDelivery\Models\Product;
 class ProductRepositoryEloquent extends BaseRepository implements ProductRepository
 {
 
+   public function lista()
+   {
+       return $this->model->get(['id','name', 'price']);
+   }
+
+
     /**
      * Specify Model class name
      *
