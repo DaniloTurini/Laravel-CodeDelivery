@@ -17,14 +17,14 @@ class OrderItem extends Model implements Transformable
         'qtd'
     ];
 
-    public function order()
-    {
-        return $this->belongsTo(OrderItem::class);
-    }
-
     public function product()
     {
         return $this->belongsTo(Product::class);
+    }
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
     }
 
 }

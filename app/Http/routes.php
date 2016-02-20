@@ -32,7 +32,7 @@ Route::post('password/email', 'Auth\PasswordController@postEmail');
 Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
-Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>'auth.checkrole'], function(){
+Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>'auth.checkrole:admin'], function(){
 
     Route::get('categories', ['as'=>'categories.index', 'uses'=>'CategoriesController@index']);
     Route::get('categories/create', ['as'=>'categories.create','uses'=>'CategoriesController@create']);
@@ -65,7 +65,7 @@ Route::group(['prefix'=>'admin', 'as'=>'admin.', 'middleware'=>'auth.checkrole']
 
 });
 
-Route::group(['prefix'=>'customer','as'=>'customer.'], function() {
+Route::group(['prefix'=>'customer','as'=>'customer.', 'middleware'=>'auth.checkrole:client'], function() {
     Route::get('order', ['as'=>'order.index', 'uses'=>'CheckoutController@index']);
     Route::get('order/create', ['as'=>'order.create', 'uses'=>'CheckoutController@create']);
     Route::post('order/store', ['as'=>'order.store', 'uses'=>'CheckoutController@store']);
