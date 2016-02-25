@@ -2,10 +2,6 @@
 
 namespace CodeDelivery\Http\Controllers;
 
-use CodeDelivery\Http\Requests\AdminCategoryRequest;
-use CodeDelivery\Repositories\CategoryRepository;
-use CodeDelivery\Http\Requests;
-use CodeDelivery\Http\Controllers\Controller;
 use CodeDelivery\Repositories\OrderRepository;
 use CodeDelivery\Repositories\ProductRepository;
 use CodeDelivery\Repositories\UserRepository;
@@ -52,8 +48,7 @@ class CheckoutController extends Controller
         $orders = $this->repository->scopeQuery(function($query) use($clientId) {
             return $query->where('client_id','=',$clientId);
         })->paginate();
-
-        return view('customer.order.index', compact('orders'));
+        return view('customer.order.index',compact('orders'));
     }
 
     public function create()
