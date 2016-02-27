@@ -53,6 +53,7 @@ class OrderService
                 unset($data['cupom_code']);
             }
 
+
             $items = $data['items'];
             unset($data['items']);
 

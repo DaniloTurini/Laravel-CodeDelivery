@@ -76,6 +76,10 @@
             calculateTotal();
         });
 
+        window.onload = function(){
+            calculateTotal();
+        }
+
         function calculateTotal() {
             var total = 0,
                     trLen = $('table tbody tr').length,
