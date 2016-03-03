@@ -53,6 +53,7 @@ class OrderService
                 unset($data['cupom_code']);
             }
 
+            $data['total'] = 0;
 
             $items = $data['items'];
             unset($data['items']);
@@ -70,6 +71,7 @@ class OrderService
             if (isset($cupom)) {
                 $order->total = $total - $cupom->value;
             }
+
             $order->save();
             \DB::commit();
             return $order;

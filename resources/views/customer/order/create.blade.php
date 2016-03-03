@@ -10,6 +10,13 @@
             {!! Form::open(['route' => 'customer.order.store', 'class' => 'form']) !!}
 
             <div class="form-group">
+                <p>Me desculpe mas no meu computador não está ocorrendo o erro reportado. Fiz uma alteração para quando
+                o total for null passar o valor 0 antes de totalizar, acho que isso deve resolver, mas comigo não ocorre o erro.</p>
+                <br>
+                <p>Assista ao vídeo que está na pasta public\vídeo</p>
+                <br>
+
+
                 <label>Total: </label>
                 <p id="total"></p>
                 <a href="#" id="btnNewItem" class="btn btn-default">Novo Item</a>
