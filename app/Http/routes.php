@@ -83,4 +83,12 @@ Route::group(['prefix'=>'api','middleware'=>'oauth', 'as' => 'api.'], function()
            'total' => 10
        ];
     });
+
+    Route::get('teste', function() {
+        return [
+            'id' => 1,
+            'client' => 'Danilo Turini',
+            'total' => 10
+        ];
+    });
 });
